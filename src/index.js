@@ -1,7 +1,5 @@
 import './style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Tooltip, Toast, Popover } from 'bootstrap';
-import 'remixicon/fonts/remixicon.css';
 import 'boxicons';
 
 require('bootstrap-icons/font/bootstrap-icons.css');

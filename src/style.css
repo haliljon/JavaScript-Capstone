@@ -1,6 +1,6 @@
 body {
   font-family: 'Open Sans', sans-serif;
-  color: #444444;
+  color: #444;
 }
 
 a {
@@ -22,9 +22,9 @@ h6 {
   font-family: 'Raleway', sans-serif;
 }
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
   # Header
-  --------------------------------------------------------------*/
+  -------------------------------------------------------------- */
 
 #header {
   background: rgb(40, 72, 137, 97%);
@@ -55,7 +55,8 @@ h6 {
 
 #header .logo img {
   max-height: 55px;
-  filter: invert(98%) sepia(2%) saturate(300%) hue-rotate(253deg)
+  filter:
+    invert(98%) sepia(2%) saturate(300%) hue-rotate(253deg)
     brightness(119%) contrast(100%);
 }
 
@@ -109,7 +110,7 @@ h6 {
   margin-left: 5px;
 }
 
-.navbar > ul > li > a:before {
+.navbar > ul > li > a::before {
   content: '';
   position: absolute;
   width: 100%;
@@ -118,13 +119,13 @@ h6 {
   left: 0;
   background-color: #f6b024;
   visibility: hidden;
-  width: 0px;
+  width: 0;
   transition: all 0.3s ease-in-out 0s;
 }
 
-.navbar a:hover:before,
-.navbar li:hover > a:before,
-.navbar .active:before {
+.navbar a:hover::before,
+.navbar li:hover > a::before,
+.navbar .active::before {
   visibility: visible;
   width: 100%;
 }
@@ -202,9 +203,9 @@ h6 {
   color: #0665b7;
 }
 
-.navbar-mobile a:hover:before,
-.navbar-mobile li:hover > a:before,
-.navbar-mobile .active:before {
+.navbar-mobile a:hover::before,
+.navbar-mobile li:hover > a::before,
+.navbar-mobile .active::before {
   visibility: hidden;
 }
 
@@ -219,9 +220,9 @@ h6 {
   margin: 15px;
 }
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
   # Icon Boxes
-  --------------------------------------------------------------*/
+  -------------------------------------------------------------- */
 .icon-boxes {
   padding-top: 0;
   margin-top: 200px;
@@ -238,9 +239,11 @@ h6 {
   transition: all 0.3s ease-in-out;
   border-radius: 10px;
 }
+
 .icon-boxes .icon-box img {
   width: 100%;
 }
+
 .icon-boxes .icon {
   margin: 0 auto 20px auto;
   display: inline-block;
@@ -267,7 +270,7 @@ h6 {
   font-size: 15px;
   line-height: 28px;
   margin-bottom: 0;
-  color: #777777;
+  color: #777;
 }
 
 #hero {
@@ -278,12 +281,11 @@ h6 {
   background: url('./resources/Disney-Castles-MK-22.jpg') top center;
   background-size: cover;
   position: relative;
-
   z-index: 99;
   transition: 0.3s;
 }
 
-#hero:before {
+#hero::before {
   content: '';
   background: rgba(6, 100, 183, 0.583);
   position: absolute;
@@ -340,6 +342,7 @@ h6 {
 #footer .credits {
   font-size: 13px;
 }
+
 #footer .credits a {
   color: #f6b024;
 }
