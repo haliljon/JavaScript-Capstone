@@ -55,8 +55,7 @@ h6 {
 
 #header .logo img {
   max-height: 55px;
-  filter:
-    invert(98%) sepia(2%) saturate(300%) hue-rotate(253deg)
+  filter: invert(98%) sepia(2%) saturate(300%) hue-rotate(253deg)
     brightness(119%) contrast(100%);
 }
 
@@ -369,4 +368,12 @@ h6 {
   background: #0880e8;
   color: #fff;
   text-decoration: none;
+}
+.likes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.likes p {
+  margin: unset;
 }
