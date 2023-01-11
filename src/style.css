@@ -72,7 +72,7 @@ h6 {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover>a {
+.navbar li:hover > a {
   color: #fff;
 }
 
@@ -82,7 +82,8 @@ h6 {
 
 #header .logo img {
   max-height: 55px;
-  filter: invert(98%) sepia(2%) saturate(300%) hue-rotate(253deg) brightness(119%) contrast(100%);
+  filter: invert(98%) sepia(2%) saturate(300%) hue-rotate(253deg)
+    brightness(119%) contrast(100%);
 }
 
 .header-inner-pages {
@@ -109,7 +110,7 @@ h6 {
   position: relative;
 }
 
-.navbar>ul>li {
+.navbar > ul > li {
   position: relative;
   white-space: nowrap;
   padding: 10px 0 10px 24px;
@@ -122,7 +123,7 @@ h6 {
   margin-left: 5px;
 }
 
-.navbar>ul>li>a::before {
+.navbar > ul > li > a::before {
   content: '';
   position: absolute;
   height: 2px;
@@ -135,7 +136,7 @@ h6 {
 }
 
 .navbar a:hover::before,
-.navbar li:hover>a::before,
+.navbar li:hover > a::before,
 .navbar .active::before {
   visibility: visible;
   width: 100%;
@@ -196,19 +197,19 @@ h6 {
   transition: 0.3s;
 }
 
-.navbar-mobile>ul>li {
+.navbar-mobile > ul > li {
   padding: 0;
 }
 
 .navbar-mobile a:hover::before,
-.navbar-mobile li:hover>a::before,
+.navbar-mobile li:hover > a::before,
 .navbar-mobile .active::before {
   visibility: hidden;
 }
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
-.navbar-mobile li:hover>a {
+.navbar-mobile li:hover > a {
   color: #f6b024;
 }
 
@@ -410,29 +411,68 @@ h6 {
 /* --------------------------------------------------------------
   # Popup section
   -------------------------------------------------------------- */
+.popup__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 50%;
+  height: 84vh;
+  margin: 0 auto;
+  background-color: white;
+  z-index: 100;
+  margin-top: 100px;
+  border-radius: 16px;
+  overflow-y: scroll;
+}
+
+.ul-comment {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
 
 .cross {
   float: right;
+  margin: 15px;
 }
 
+.popup-img {
+  width: 100%;
+  margin-bottom: 25px;
+  border-radius: 10px;
+}
 
 .popup {
   width: 100%;
   margin: 0 auto;
-  padding: 25px 45px;
+  padding: 5px 28px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 25px;
 }
 
-.msg {
-  padding: 25px 45px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+input[type="text"] {
+  padding: 14px 28px;
+  border-radius: 5px;
+  border: 2px solid rgba(5, 87, 158, 0.9);
+  text-align: start;
+  width: 70%;
+  margin-bottom: 10px;
+}
+
+input[type="text"]::placeholder {
+  color: rgba(5, 87, 158, 0.9);
+}
+
+input[type="text"]:focus {
+  border: 2px solid #f6b024;
+  box-shadow: 0 0 0 0.2rem rgba(246, 176, 36, 0.5);
 }
 
 .comments-popup {

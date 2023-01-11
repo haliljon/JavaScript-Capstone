@@ -1,3 +1,4 @@
+
 const displayCard = (data) => {
   data.forEach((set) => {
     const divRow = document.querySelector('.row');
@@ -13,7 +14,7 @@ const displayCard = (data) => {
   137 - set._id
 } likes</p><i class="bx bx-heart"></i></div>
       <div class="text-center mt-3">
-        <a href="#" class="comments text-center">Comments</a></div>
+        <a href="#" class="comments text-center" onclick=${displayComment(set)}>Comments</a></div>
     </div>
   </div>`;
   });
