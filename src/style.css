@@ -1,5 +1,5 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: #444;
 }
 
@@ -72,7 +72,7 @@ h6 {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover > a {
+.navbar li:hover>a {
   color: #fff;
 }
 
@@ -82,8 +82,7 @@ h6 {
 
 #header .logo img {
   max-height: 55px;
-  filter: invert(98%) sepia(2%) saturate(300%) hue-rotate(253deg)
-    brightness(119%) contrast(100%);
+  filter: invert(98%) sepia(2%) saturate(300%) hue-rotate(253deg) brightness(119%) contrast(100%);
 }
 
 .header-inner-pages {
@@ -110,7 +109,7 @@ h6 {
   position: relative;
 }
 
-.navbar > ul > li {
+.navbar>ul>li {
   position: relative;
   white-space: nowrap;
   padding: 10px 0 10px 24px;
@@ -123,7 +122,7 @@ h6 {
   margin-left: 5px;
 }
 
-.navbar > ul > li > a::before {
+.navbar>ul>li>a::before {
   content: '';
   position: absolute;
   height: 2px;
@@ -136,7 +135,7 @@ h6 {
 }
 
 .navbar a:hover::before,
-.navbar li:hover > a::before,
+.navbar li:hover>a::before,
 .navbar .active::before {
   visibility: visible;
   width: 100%;
@@ -197,19 +196,19 @@ h6 {
   transition: 0.3s;
 }
 
-.navbar-mobile > ul > li {
+.navbar-mobile>ul>li {
   padding: 0;
 }
 
 .navbar-mobile a:hover::before,
-.navbar-mobile li:hover > a::before,
+.navbar-mobile li:hover>a::before,
 .navbar-mobile .active::before {
   visibility: hidden;
 }
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
-.navbar-mobile li:hover > a {
+.navbar-mobile li:hover>a {
   color: #f6b024;
 }
 
@@ -406,4 +405,50 @@ h6 {
 
 .likes p {
   margin: unset;
+}
+
+/* --------------------------------------------------------------
+  # Popup section
+  -------------------------------------------------------------- */
+
+.cross {
+  float: right;
+}
+
+
+.popup {
+  width: 100%;
+  margin: 0 auto;
+  padding: 25px 45px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.msg {
+  padding: 25px 45px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comments-popup {
+  font-family: 'Raleway', sans-serif;
+  padding: 12px 32px;
+  border-radius: 5px;
+  border-color: #f6b024;
+  color: white;
+  background-color: #f6b024;
+  text-decoration: none;
+}
+
+.comments-popup:hover {
+  background: rgba(5, 87, 158, 0.9);
+  border: 2px solid rgba(5, 87, 158, 0.9);
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+  color: white;
 }

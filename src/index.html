@@ -1,89 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
-    />
 
-    <title>Document</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
 
-  <body>
-    <div id="hero">
-      <header id="header" class="fixed-top d-flex align-items-center">
-        <div
-          class="container d-flex align-items-center justify-content-between"
-        >
-          <h1 class="logo"
-            ><img
-              src="./resources/Disney-logo-png.png"
-              alt="Logo"
-              class="img-fluid"
-          /></h1>
+  <title>Document</title>
+</head>
 
-          <nav id="navbar" class="navbar">
-            <ul>
-              <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-              <li><a class="nav-link scrollto" href="#about">About</a></li>
-              <li><a class="nav-link scrollto" href="#team">Team</a></li>
-              <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-            </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i> </nav
-          ><!-- .navbar -->
-        </div>
-      </header>
-      <main>
-        <section id="icon-boxes" class="icon-boxes">
-          <div class="container">
-            <div class="row">
-              <!-- Card 1 -->
-              <div
-                class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-4"
-              >
-                <div class="icon-box">
-                  <div class="image-container">
-                    <img
-                      src="https://static.wikia.nocookie.net/disney/images/f/fa/Normal_EoA_S3_E4_0217.jpg"
-                      alt="Queen Abigail"
-                    />
-                  </div>
-                  <h4 class="title"><a href="">Queen Abigail</a></h4>
-                  <p class="description">animated series Elena of Avalor</p>
-                  <div class="likes">
-                    <p>5 likes</p><i class="bx bx-heart"></i>
-                  </div>
-                  <div class="text-center mt-3">
-                    <a href="#" class="comments text-center">Comments</a>
-                  </div>
+<body>
+  <div id="hero">
+    <header id="header" class="fixed-top d-flex align-items-center">
+      <div class="container d-flex align-items-center justify-content-between">
+        <h1 class="logo">
+          <img src="./resources/Disney-logo-png.png" alt="Logo" class="img-fluid" />
+        </h1>
+
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+            <li><a class="nav-link scrollto" href="#about">About</a></li>
+            <li><a class="nav-link scrollto" href="#team">Team</a></li>
+            <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+        <!-- .navbar -->
+      </div>
+    </header>
+    <main>
+      <section id="icon-boxes" class="icon-boxes">
+        <div class="container">
+          <div class="row">
+            <!-- Card 1 -->
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-4">
+              <div class="icon-box">
+                <div class="image-container">
+                  <img src="https://static.wikia.nocookie.net/disney/images/f/fa/Normal_EoA_S3_E4_0217.jpg"
+                    alt="Queen Abigail" />
+                </div>
+                <h4 class="title"><a href="">Queen Abigail</a></h4>
+                <p class="description">animated series Elena of Avalor</p>
+                <div class="likes">
+                  <p>5 likes</p>
+                  <i class="bx bx-heart"></i>
+                </div>
+                <div class="text-center mt-3">
+                  <a href="#" class="comments text-center">Comments</a>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-      </main>
-    </div>
-
-    <!-- popup section -->
-
-    <footer id="footer">
-      <div class="container">
-        <div class="social-links mt-3">
-          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
         </div>
-        <div class="copyright">
-          &copy; Copyright <strong><span>Haliljon & Anna</span></strong
-          >. All Rights Reserved
-        </div>
-        <div class="credits"> Designed by Haliljon Jurabev & Anna Eliana </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- PopUp -->
+  <div class="cross">
+    <button type="button" class="btn btn-custom" style="background-color: #f6b024; color: white">
+      &times;<i class="fa-solid fa-circle-xmark"></i>
+    </button>
+  </div>
+
+  <div class="popup">
+    <h1 class="popup__title">Disney Character</h1>
+    <p class="source-name">Movie/TV Title:</p>
+    <p>Comments</p>
+    <input type="text" placeholder="Enter your name" />
+    <br />
+    <input type="text" placeholder="Enter your comments" />
+  </div>
+  <div class="msg">
+    <textarea name="msg" id="thoughts" cols="30" rows="5" placeholder="Your thoughts" required=""></textarea>
+  </div>
+  <div class="text-center mt-3">
+    <a href="#" class="comments-popup text-center">Comments</a>
+  </div>
+  <!-- End of Comment Popup -->
+
+  <footer id="footer">
+    <div class="container">
+      <div class="social-links mt-3">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>
-    </footer>
-  </body>
+      <div class="copyright">
+        &copy; Copyright <strong><span>Haliljon & Anna</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">Designed by Haliljon Jurabev & Anna Eliana</div>
+    </div>
+  </footer>
+</body>
 </html>
