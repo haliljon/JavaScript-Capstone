@@ -239,10 +239,6 @@ h6 {
   border-radius: 10px;
 }
 
-.icon-boxes .icon-box img {
-  width: 100%;
-}
-
 .icon-boxes .icon {
   margin: 0 auto 20px auto;
   display: inline-block;
@@ -271,6 +267,26 @@ h6 {
   margin-bottom: 0;
   color: #777;
 }
+
+#icon-boxes {
+  height: 1000px;
+  max-height:1000px;
+  overflow: scroll;
+}
+
+.icon-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
 
 #hero {
   width: 100%;
