@@ -12,11 +12,7 @@
   font-family: "remixicon";
   src: url('remixicon.eot?t=1590207869815'); /* IE9 */
   src:
-    url('remixicon.eot?t=1590207869815#iefix') format('embedded-opentype'), 
-  url("remixi    n.woff2?t=1590207869815") format("woff2"),
-  url("remixi    n.woff?t=1590207869815") format("woff"),
-  url('remixi    n.ttf?t=1590207869815') format('truetype'), 
-  url('remixicon.svg?t=1590207869815#remixicon') format('svg')    ; /* iOS 4.1- */
+    url('remixicon.eot?t=1590207869815#iefix') format('embedded-opentype'),      url("remixi    n.woff2?t=1590207869815") format("woff2"),     url("remixi    n.woff?t=1590207869815") format("woff"),     url('remixi    n.ttf?t=1590207869815') format('truetype'),      url('remixicon.svg?t=1590207869815#remixicon') format('svg'); /* iOS 4.1- */
 
   font-display: swap;
 }
