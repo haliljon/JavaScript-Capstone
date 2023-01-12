@@ -240,6 +240,7 @@ h6 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .icon-boxes .icon {
@@ -282,7 +283,7 @@ h6 {
 }
 
 #icon-boxes {
-  height: 600px;
+  height: 500px;
   max-height: 1000px;
   overflow: scroll;
 }
