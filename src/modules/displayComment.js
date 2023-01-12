@@ -25,7 +25,7 @@ const displayComment = (data, popup) => {
 </div>
 </div>
   `;
-  
+
   popup.innerHTML = comment;
 };
 

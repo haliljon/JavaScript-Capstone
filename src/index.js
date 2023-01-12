@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'boxicons';
 
 import displayCard from './modules/displayCard.js';
-import displayComment from './modules/displayComment';
+import displayComment from './modules/displayComment.js';
 
 require('bootstrap-icons/font/bootstrap-icons.css');
 
@@ -27,12 +27,11 @@ const getData = async () => {
       closepopup.addEventListener('click', () => {
         popup.style.display = 'none';
         popup.innerHTML = '';
-      })
-
-    })
-  })
+      });
+    });
+  });
 };
 
 document.addEventListener('DOMContentLoaded', () => {
   getData();
-})
+});

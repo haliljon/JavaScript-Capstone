@@ -1,6 +1,5 @@
 const displayCard = (data, div) => {
   data.forEach((set) => {
-
     div.innerHTML += `<div
     class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-4">
     <div class="icon-box">
