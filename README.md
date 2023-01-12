@@ -167,6 +167,6 @@ This project is [MIT](./LICENSE) licensed.
 
 <div align="center">
     <img src="kefi-Unearthed-5.png" alt="logo" width="250"  height="auto" />
-    <h3><b>Anna Petras for KING YESHUA - Kefi Unearthed</b></h3>
+    <h3><b>Anna Petras for KING YESHUA - Kefi Unearthed - Rev 1:8</b></h3>
 💜
 
