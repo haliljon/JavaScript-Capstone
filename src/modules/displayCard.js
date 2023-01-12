@@ -1,7 +1,6 @@
-const displayCard = (data) => {
+const displayCard = (data, div) => {
   data.forEach((set) => {
-    const divRow = document.querySelector('.row');
-    divRow.innerHTML += `<div
+    div.innerHTML += `<div
     class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-4">
     <div class="icon-box">
       <img class="image-container"
@@ -17,7 +16,6 @@ const displayCard = (data) => {
     </div>
   </div>`;
   });
-  return divRow;
 };
 
 export default displayCard;

@@ -11,6 +11,7 @@
   },
   "extends": ["airbnb-base"],
   "rules": {
+    "no-underscore-dangle": "off",
     "no-shadow": "off",
     "no-param-reassign": "off",
     "eol-last": "off",
@@ -22,5 +23,5 @@
       }
     ]
   },
-  "ignorePatterns": ["dist/", "build/", "src/"]
+  "ignorePatterns": ["dist/", "build/", "node_modules/", "src/resources/"]
 }
