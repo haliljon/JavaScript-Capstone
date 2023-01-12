@@ -22,6 +22,11 @@ module.exports = {
         type: 'asset/resource',
       },
       {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: /(node_modules)/,
+      },
+      {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         include: path.resolve(
           __dirname,

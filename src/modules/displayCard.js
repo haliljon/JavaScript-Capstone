@@ -1,5 +1,3 @@
-import displayComment from "./displayComment";
-
 const displayCard = (data, div) => {
   data.forEach((set) => {
 
