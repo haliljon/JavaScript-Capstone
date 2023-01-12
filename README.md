@@ -113,8 +113,8 @@ Clone this repository to your desired folder:
 
 <!-- Author -->
 
-👤 **Author**
-Haliljon Juraboev
+👤 **Authors:**
+Haliljon Juraboev and
 Anna Petras
 
 
