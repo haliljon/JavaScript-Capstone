@@ -1,4 +1,8 @@
-const displayComment = (data, popup) => {
+const displayComment = async (data, popup,comments) => {
+  console.log(comments);
+  const listOfComments = comments.length > 0 && !comments.error? comments.map(comment => `
+  <li>${comment.creation_date}- ${comment.username}: ${comment.comment}</li>`).join('') : 
+  '<li>No comments found, Be the first one to comment</li>';
   const comment = `
   <div class="cross">
   <button type="button" class="btn btn-custom close-popup" style="background-color: #f6b024; color: white">
@@ -12,17 +16,14 @@ const displayComment = (data, popup) => {
   <p class="source-name">Movie/TV Title: ${data.name}</p>
   <p>Comments</p>
   <ul class="ul-comment">
-    <li>01/11/2023- Anna: This movie looks good</li>
-    <li>01/11/2023- Anna: This movie looks good</li>
-    <li>01/11/2023- Anna: This movie looks good</li>
-    <li>01/11/2023- Anna: This movie looks good</li>
-    <li>01/11/2023- Anna: This movie looks good</li>
+   ${listOfComments}
   </ul>
-  <input type="text" placeholder="Enter your name" />
-  <input type="text" placeholder="Enter your comments" />
-<div class="text-center mt-3">
-  <a href="#" class="comments-popup text-center">Comments</a>
-</div>
+  <form class="text-center mt-3" id="send-form" method="post">
+  <input type="hidden" value="${data._id}" />
+  <input type="text" name="name" placeholder="Enter your name" />
+  <input type="text" name="comment" placeholder="Enter your comments" />
+  <input type="submit" id="send_comment" class="comments-popup text-center"/>
+</form>
 </div>
   `;
 
