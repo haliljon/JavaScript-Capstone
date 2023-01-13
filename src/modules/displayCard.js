@@ -1,16 +1,17 @@
 const displayCard = (data, div, likes) => {
   const arr1 = [];
+  let itemCount = 0;
   data.every((set) => {
     if (set._id > 31) {
       return false;
     }
     if (
-      set._id === 14
-      || set._id === 16
-      || set._id === 18
-      || set._id === 24
-      || set._id === 31
-      || set._id === 34
+      set._id === 14 ||
+      set._id === 16 ||
+      set._id === 18 ||
+      set._id === 24 ||
+      set._id === 31 ||
+      set._id === 34
     ) {
       [set.tvShows] = set.films;
     } else if (set._id === 13 || set._id === 23) {
@@ -21,7 +22,7 @@ const displayCard = (data, div, likes) => {
       set.tvShows = set.name;
     }
     arr1.push(set._id);
-
+    itemCount += 1;
     let likeS = 0;
     for (let i = 1; i < likes.length; i += 1) {
       if (likes[i].item_id === set._id) {
@@ -48,7 +49,7 @@ const displayCard = (data, div, likes) => {
 
     return true;
   });
-  return arr1;
+  return itemCount;
 };
 
 export default displayCard;

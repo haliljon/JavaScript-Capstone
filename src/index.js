@@ -7,8 +7,10 @@ import incrementLikes from './modules/increaseLikes.js';
 import displayComment from './modules/displayComment.js';
 import InvolvementAPI from './modules/API.js';
 import likeGetData from './modules/getLikeData.js';
+import itemsCounter from './modules/itemsCounter.js';
 
-const baseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/f9a0uWRwRqUh4EVjZ7AB';
+const baseUrl =
+  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/f9a0uWRwRqUh4EVjZ7AB';
 
 require('bootstrap-icons/font/bootstrap-icons.css');
 
@@ -44,7 +46,8 @@ const getData = async () => {
   const divRow = document.querySelector('.row');
   const popup = document.querySelector('.popup__container');
   const likes = await likeGetData();
-  displayCard(information, divRow, likes);
+  const itemCount = displayCard(information, divRow, likes);
+  itemsCounter(itemCount);
   // Select list of comment buttons after getting rendered by displayCard
   const commentBtn = document.querySelectorAll('.comments');
   commentBtn.forEach((comment, index) => {
