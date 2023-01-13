@@ -1,6 +1,11 @@
 const displayComment = async (data, popup, comments) => {
-  const listOfComments = comments.length > 0 && !comments.error ? comments.map((comment) => `
-  <li>${comment.creation_date}- ${comment.username}: ${comment.comment}</li>`).join('')
+  const listOfComments = comments.length > 0 && !comments.error
+    ? comments
+      .map(
+        (comment) => `
+  <li>${comment.creation_date}- ${comment.username}: ${comment.comment}</li>`,
+      )
+      .join('')
     : '<li>No comments found, Be the first one to comment</li>';
   const comment = `
   <div class="cross">

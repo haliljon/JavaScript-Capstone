@@ -72,7 +72,7 @@ h6 {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover > a {
+.navbar li:hover>a {
   color: #fff;
 }
 
@@ -82,8 +82,7 @@ h6 {
 
 #header .logo img {
   max-height: 55px;
-  filter: invert(98%) sepia(2%) saturate(300%) hue-rotate(253deg)
-    brightness(119%) contrast(100%);
+  filter: invert(98%) sepia(2%) saturate(300%) hue-rotate(253deg) brightness(119%) contrast(100%);
 }
 
 .header-inner-pages {
@@ -110,7 +109,7 @@ h6 {
   position: relative;
 }
 
-.navbar > ul > li {
+.navbar>ul>li {
   position: relative;
   white-space: nowrap;
   padding: 10px 0 10px 24px;
@@ -123,7 +122,7 @@ h6 {
   margin-left: 5px;
 }
 
-.navbar > ul > li > a::before {
+.navbar>ul>li>a::before {
   content: '';
   position: absolute;
   height: 2px;
@@ -136,7 +135,7 @@ h6 {
 }
 
 .navbar a:hover::before,
-.navbar li:hover > a::before,
+.navbar li:hover>a::before,
 .navbar .active::before {
   visibility: visible;
   width: 100%;
@@ -197,19 +196,19 @@ h6 {
   transition: 0.3s;
 }
 
-.navbar-mobile > ul > li {
+.navbar-mobile>ul>li {
   padding: 0;
 }
 
 .navbar-mobile a:hover::before,
-.navbar-mobile li:hover > a::before,
+.navbar-mobile li:hover>a::before,
 .navbar-mobile .active::before {
   visibility: hidden;
 }
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
-.navbar-mobile li:hover > a {
+.navbar-mobile li:hover>a {
   color: #f6b024;
 }
 
@@ -327,7 +326,7 @@ h6 {
   color: #fff;
   font-size: 14px;
   text-align: center;
-  padding: 15px 0 30px 0;
+  padding: 15px 0 44px 0;
 }
 
 #footer h3 {
@@ -459,7 +458,7 @@ li {
   margin-bottom: 25px;
 }
 
-input[type="text"] {
+input[type='text'] {
   padding: 14px 28px;
   border-radius: 5px;
   border: 2px solid rgba(5, 87, 158, 0.9);
@@ -468,11 +467,11 @@ input[type="text"] {
   margin-bottom: 10px;
 }
 
-input[type="text"]::placeholder {
+input[type='text']::placeholder {
   color: rgba(5, 87, 158, 0.9);
 }
 
-input[type="text"]:focus {
+input[type='text']:focus {
   border: 2px solid #f6b024;
   box-shadow: 0 0 0 0.2rem rgba(246, 176, 36, 0.5);
 }
@@ -516,5 +515,34 @@ input[type="text"]:focus {
     max-width: 100%;
     margin-bottom: 25px;
     border-radius: 10px;
-  }  
+  }
+}
+
+/* --------------------------------------------------------------
+  # Like button
+  -------------------------------------------------------------- */
+
+.like-section {
+  display: flex;
+  align-items: center;
+  padding: 0px 22px;
+  width: 148px;
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #f6b024;
+  border: 2px solid #0880e8;
+  border-radius: 5px;
+}
+
+.like-section .like-button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin-left: 10px;
+  color: #0880e8;
+  font-size: 30px;
+}
+
+.like-section:hover {
+  background-color: #bcd8f3a7;
 }

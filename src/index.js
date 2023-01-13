@@ -3,8 +3,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'boxicons';
 
 import displayCard from './modules/displayCard.js';
+import incrementLikes from './modules/increaseLikes.js';
 import displayComment from './modules/displayComment.js';
 import InvolvementAPI from './modules/API.js';
+import likeGetData from './modules/getLikeData.js';
+import itemsCounter from './modules/itemsCounter.js';
+
+const baseUrl =
+  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/f9a0uWRwRqUh4EVjZ7AB';
 
 require('bootstrap-icons/font/bootstrap-icons.css');
 
@@ -39,13 +45,23 @@ const getData = async () => {
   const information = data.data;
   const divRow = document.querySelector('.row');
   const popup = document.querySelector('.popup__container');
-  displayCard(information, divRow);
+  const likes = await likeGetData();
+  const itemCount = displayCard(information, divRow, likes);
+  itemsCounter(itemCount);
   // Select list of comment buttons after getting rendered by displayCard
   const commentBtn = document.querySelectorAll('.comments');
   commentBtn.forEach((comment, index) => {
     comment.addEventListener('click', async () => {
       popup.style.display = 'block';
       await renderComment(information, index, popup);
+    });
+  });
+  const likeButton = document.querySelectorAll('.like-button');
+  likeButton.forEach((like, index) => {
+    like.addEventListener('click', () => {
+      const likeCounter = document.querySelector('.likesSpan');
+      likeCounter.innerText = incrementLikes(information[index]._id, baseUrl);
+      location.reload();
     });
   });
 };
