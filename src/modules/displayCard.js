@@ -5,12 +5,12 @@ const displayCard = (data, div, likes) => {
       return false;
     }
     if (
-      set._id === 14 ||
-      set._id === 16 ||
-      set._id === 18 ||
-      set._id === 24 ||
-      set._id === 31 ||
-      set._id === 34
+      set._id === 14
+      || set._id === 16
+      || set._id === 18
+      || set._id === 24
+      || set._id === 31
+      || set._id === 34
     ) {
       [set.tvShows] = set.films;
     } else if (set._id === 13 || set._id === 23) {
@@ -23,12 +23,11 @@ const displayCard = (data, div, likes) => {
     arr1.push(set._id);
 
     let likeS = 0;
-    for (let i = 1; i < likes.length; i++) {
+    for (let i = 1; i < likes.length; i += 1) {
       if (likes[i].item_id === set._id) {
         likeS = likes[i].likes;
       }
     }
-    console.log(likeS);
 
     div.innerHTML += `<div
     class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-4">
