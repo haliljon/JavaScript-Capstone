@@ -459,7 +459,7 @@ li {
   margin-bottom: 25px;
 }
 
-input[type="text"] {
+input[type='text'] {
   padding: 14px 28px;
   border-radius: 5px;
   border: 2px solid rgba(5, 87, 158, 0.9);
@@ -468,11 +468,11 @@ input[type="text"] {
   margin-bottom: 10px;
 }
 
-input[type="text"]::placeholder {
+input[type='text']::placeholder {
   color: rgba(5, 87, 158, 0.9);
 }
 
-input[type="text"]:focus {
+input[type='text']:focus {
   border: 2px solid #f6b024;
   box-shadow: 0 0 0 0.2rem rgba(246, 176, 36, 0.5);
 }
@@ -516,5 +516,15 @@ input[type="text"]:focus {
     max-width: 100%;
     margin-bottom: 25px;
     border-radius: 10px;
-  }  
+  }
+}
+
+/* --------------------------------------------------------------
+  # Like button
+  -------------------------------------------------------------- */
+
+.like-button {
+  color: #0880e8;
+  border: 1px solid #0880e8;
+  background-color: white;
 }

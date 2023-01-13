@@ -1,5 +1,20 @@
-const displayCard = (data, div) => {
+const displayCard = (data, div, likes) => {
+  const listOfLikes = likes.length > 0 && !likes.error
+    ? likes
+      .map(
+        (like) => `<div class="like-section">
+            <span class="likesSpan">${like.likes} likes         </span>
+            <button class="like-button">♥️</button>
+          </div>`,
+      )
+      .join('')
+    : `<div class="like-section">
+          <span class="likesSpan">0 likes       </span>
+          <button class="like-button">♥️</button>
+        </div>`;
+
   const arr1 = [];
+  const index = -1;
   data.every((set) => {
     if (set._id > 31) {
       return false;
@@ -20,9 +35,15 @@ const displayCard = (data, div) => {
     } else if (set._id === 6) {
       set.tvShows = set.name;
     }
-
     arr1.push(set._id);
 
+    let likeS = 0;
+    for (let i = 1; i < likes.length; i++) {
+      if (likes[i].item_id === set._id) {
+        likeS = likes[i].likes;
+      }
+    }
+    console.log(likeS);
     div.innerHTML += `<div
     class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-4">
     <div class="icon-box">
@@ -31,6 +52,10 @@ const displayCard = (data, div) => {
         alt="${set.name}"/>
       <h4 class="title"><a href="">${set.name}</a></h4>
       <p class="description">${set.tvShows}</p>
+      <div class="like-section">
+          <span class="likesSpan">${likeS} likes       </span>
+          <button class="like-button">♥️</button>
+        </div>
       <div class="text-center mt-3">
         <a href="#" class="comments text-center">Comments</a></div>
     </div>
