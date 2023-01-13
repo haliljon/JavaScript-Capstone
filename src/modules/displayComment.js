@@ -22,6 +22,7 @@ const displayComment = async (data, popup, comments) => {
   <input type="hidden" value="${data._id}" />
   <input type="text" name="name" placeholder="Enter your name" />
   <input type="text" name="comment" placeholder="Enter your comments" />
+  <br>
   <input type="submit" id="send_comment" class="comments-popup text-center"/>
 </form>
 </div>
