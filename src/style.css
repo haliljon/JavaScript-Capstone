@@ -459,12 +459,18 @@ li {
   margin-bottom: 25px;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 input[type="text"] {
   padding: 14px 28px;
   border-radius: 5px;
   border: 2px solid rgba(5, 87, 158, 0.9);
   text-align: start;
-  width: 70%;
+  width: 150%;
   margin-bottom: 10px;
 }
 
@@ -479,7 +485,7 @@ input[type="text"]:focus {
 
 .comments-popup {
   font-family: 'Raleway', sans-serif;
-  padding: 12px 32px;
+  padding: 12px 55px;
   border-radius: 5px;
   border-color: #f6b024;
   color: white;
