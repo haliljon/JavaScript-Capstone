@@ -4,10 +4,34 @@ import 'boxicons';
 
 import displayCard from './modules/displayCard.js';
 import displayComment from './modules/displayComment.js';
+import InvolvementAPI from './modules/API.js';
 
 require('bootstrap-icons/font/bootstrap-icons.css');
 
 const URL = 'https://api.disneyapi.dev/characters';
+
+const renderComment = async (information, index, popup) => {
+  const comments = await InvolvementAPI.getComments(information[index]._id);
+  await displayComment(information[index], popup, comments);
+  // Add event listener for close popup button
+  const closepopup = document.querySelector('.close-popup');
+  closepopup.addEventListener('click', () => {
+    popup.style.display = 'none';
+    popup.innerHTML = '';
+  });
+  // Add event listener for send comment
+  const form = document.querySelector('#send-form');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const { elements } = form;
+    const id = elements[0].value;
+    const name = elements[1].value;
+    const comment = elements[2].value;
+    await InvolvementAPI.sendComment(id, name, comment);
+    form.reset();
+    await renderComment(information, index, popup);
+  });
+};
 
 const getData = async () => {
   const res = await fetch(URL);
@@ -19,15 +43,9 @@ const getData = async () => {
   // Select list of comment buttons after getting rendered by displayCard
   const commentBtn = document.querySelectorAll('.comments');
   commentBtn.forEach((comment, index) => {
-    comment.addEventListener('click', () => {
+    comment.addEventListener('click', async () => {
       popup.style.display = 'block';
-      displayComment(information[index], popup);
-      // Add event listener for close popup button
-      const closepopup = document.querySelector('.close-popup');
-      closepopup.addEventListener('click', () => {
-        popup.style.display = 'none';
-        popup.innerHTML = '';
-      });
+      await renderComment(information, index, popup);
     });
   });
 };
