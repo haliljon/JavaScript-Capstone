@@ -523,8 +523,23 @@ input[type='text']:focus {
   # Like button
   -------------------------------------------------------------- */
 
-.like-button {
+.like-section {
+  display: flex;
+  align-items: center;
+  padding: 0px 22px;
+  width: 148px;
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #f6b024;
+  border: 2px solid #0880e8;
+  border-radius: 5px;
+}
+
+.like-section .like-button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin-left: 10px;
   color: #0880e8;
-  border: 1px solid #0880e8;
-  background-color: white;
+  font-size: 30px;
 }

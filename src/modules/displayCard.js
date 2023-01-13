@@ -2,7 +2,7 @@ const displayCard = (data, div, likes) => {
   const arr1 = [];
   let itemCount = 0;
   data.every((set) => {
-    if (set._id > 31) {
+    if (set._id > 36) {
       return false;
     }
     if (
