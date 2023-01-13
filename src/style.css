@@ -72,7 +72,7 @@ h6 {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover > a {
+.navbar li:hover>a {
   color: #fff;
 }
 
@@ -82,8 +82,7 @@ h6 {
 
 #header .logo img {
   max-height: 55px;
-  filter: invert(98%) sepia(2%) saturate(300%) hue-rotate(253deg)
-    brightness(119%) contrast(100%);
+  filter: invert(98%) sepia(2%) saturate(300%) hue-rotate(253deg) brightness(119%) contrast(100%);
 }
 
 .header-inner-pages {
@@ -110,7 +109,7 @@ h6 {
   position: relative;
 }
 
-.navbar > ul > li {
+.navbar>ul>li {
   position: relative;
   white-space: nowrap;
   padding: 10px 0 10px 24px;
@@ -123,7 +122,7 @@ h6 {
   margin-left: 5px;
 }
 
-.navbar > ul > li > a::before {
+.navbar>ul>li>a::before {
   content: '';
   position: absolute;
   height: 2px;
@@ -136,7 +135,7 @@ h6 {
 }
 
 .navbar a:hover::before,
-.navbar li:hover > a::before,
+.navbar li:hover>a::before,
 .navbar .active::before {
   visibility: visible;
   width: 100%;
@@ -197,19 +196,19 @@ h6 {
   transition: 0.3s;
 }
 
-.navbar-mobile > ul > li {
+.navbar-mobile>ul>li {
   padding: 0;
 }
 
 .navbar-mobile a:hover::before,
-.navbar-mobile li:hover > a::before,
+.navbar-mobile li:hover>a::before,
 .navbar-mobile .active::before {
   visibility: hidden;
 }
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
-.navbar-mobile li:hover > a {
+.navbar-mobile li:hover>a {
   color: #f6b024;
 }
 
@@ -327,7 +326,7 @@ h6 {
   color: #fff;
   font-size: 14px;
   text-align: center;
-  padding: 15px 0 30px 0;
+  padding: 15px 0 44px 0;
 }
 
 #footer h3 {
