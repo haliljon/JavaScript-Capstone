@@ -542,3 +542,7 @@ input[type='text']:focus {
   color: #0880e8;
   font-size: 30px;
 }
+
+.like-section:hover {
+  background-color: #bcd8f3a7;
+}
