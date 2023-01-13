@@ -4,7 +4,7 @@ import 'boxicons';
 
 import displayCard from './modules/displayCard.js';
 import displayComment from './modules/displayComment.js';
-import InvolvementAPI from './modules/API';
+import InvolvementAPI from './modules/API.js';
 
 require('bootstrap-icons/font/bootstrap-icons.css');
 

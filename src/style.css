@@ -495,6 +495,10 @@ input[type="text"]:focus {
   color: white;
 }
 
+.comment-title {
+  color: rgba(5, 87, 158, 0.9);
+}
+
 /* mobile version-popup */
 
 @media only screen and (max-width: 600px) {

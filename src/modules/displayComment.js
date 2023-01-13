@@ -1,5 +1,4 @@
 const displayComment = async (data, popup, comments) => {
-  console.log(comments);
   const listOfComments = comments.length > 0 && !comments.error ? comments.map((comment) => `
   <li>${comment.creation_date}- ${comment.username}: ${comment.comment}</li>`).join('')
     : '<li>No comments found, Be the first one to comment</li>';
@@ -12,9 +11,10 @@ const displayComment = async (data, popup, comments) => {
 
 <div class="popup">
   <img class="popup-img" src="${data.imageUrl}" alt="disney image" />
-  <h1 class="popup__title">Disney Character</h1>
-  <p class="source-name">Movie/TV Title: ${data.name}</p>
-  <p>Comments</p>
+  <h1 class="popup__title">${data.name}</h1>
+  <p class="source-name">${data.tvShows}</p>
+  
+  <p class="comment-title">Comments</p>
   <ul class="ul-comment">
    ${listOfComments}
   </ul>
