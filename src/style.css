@@ -458,7 +458,7 @@ li {
   margin-bottom: 25px;
 }
 
-input[type='text'] {
+input[type="text"] {
   padding: 14px 28px;
   border-radius: 5px;
   border: 2px solid rgba(5, 87, 158, 0.9);
@@ -467,11 +467,11 @@ input[type='text'] {
   margin-bottom: 10px;
 }
 
-input[type='text']::placeholder {
+input[type="text"]::placeholder {
   color: rgba(5, 87, 158, 0.9);
 }
 
-input[type='text']:focus {
+input[type="text"]:focus {
   border: 2px solid #f6b024;
   box-shadow: 0 0 0 0.2rem rgba(246, 176, 36, 0.5);
 }
@@ -498,6 +498,13 @@ input[type='text']:focus {
   color: rgba(5, 87, 158, 0.9);
 }
 
+.ul-comment {
+  border: 3px solid rgba(5, 87, 158, 0.9);
+  box-shadow: 0 0 0 0.5rem rgba(246, 176, 36, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
 @media only screen and (max-width: 768px) {
   .popup__container {
     width: 100%;
@@ -515,7 +522,7 @@ input[type='text']:focus {
     max-width: 100%;
     margin-bottom: 25px;
     border-radius: 10px;
-  }
+  }  
 }
 
 /* --------------------------------------------------------------

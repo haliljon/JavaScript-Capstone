@@ -8,6 +8,7 @@ import displayComment from './modules/displayComment.js';
 import InvolvementAPI from './modules/API.js';
 import likeGetData from './modules/getLikeData.js';
 import itemsCounter from './modules/itemsCounter.js';
+import countComments from './modules/countComments';
 
 const baseUrl =
   'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/f9a0uWRwRqUh4EVjZ7AB';
@@ -25,6 +26,11 @@ const renderComment = async (information, index, popup) => {
     popup.style.display = 'none';
     popup.innerHTML = '';
   });
+  const commentTitle = document.querySelector('.comment-title');
+  const ulComment = document.querySelector('.ul-comment');
+  
+  const nbOfComments = countComments(ulComment);
+  commentTitle.innerHTML = `Comments(${nbOfComments})`;
   // Add event listener for send comment
   const form = document.querySelector('#send-form');
   form.addEventListener('submit', async (e) => {
