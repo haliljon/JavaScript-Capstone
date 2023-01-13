@@ -7,7 +7,7 @@ function incrementLikes(id, url) {
       console.log(data);
     });
 
-  const newLikes = likes.likes + 1;
+  const newLikes = likes + 1;
   fetch(`${url}/likes`, {
     method: 'POST',
     headers: {

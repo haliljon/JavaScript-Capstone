@@ -7,8 +7,8 @@ import { incrementLikes } from './modules/increaseLikes.js';
 import displayComment from './modules/displayComment.js';
 import InvolvementAPI from './modules/API.js';
 import { likeGetData } from './modules/getLikeData.js';
-
-const baseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/f9a0uWRwRqUh4EVjZ7AB';
+const baseUrl =
+  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/f9a0uWRwRqUh4EVjZ7AB';
 
 require('bootstrap-icons/font/bootstrap-icons.css');
 

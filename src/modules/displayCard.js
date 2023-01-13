@@ -1,31 +1,16 @@
 const displayCard = (data, div, likes) => {
-  const listOfLikes = likes.length > 0 && !likes.error
-    ? likes
-      .map(
-        (like) => `<div class="like-section">
-            <span class="likesSpan">${like.likes} likes         </span>
-            <button class="like-button">♥️</button>
-          </div>`,
-      )
-      .join('')
-    : `<div class="like-section">
-          <span class="likesSpan">0 likes       </span>
-          <button class="like-button">♥️</button>
-        </div>`;
-
   const arr1 = [];
-  const index = -1;
   data.every((set) => {
     if (set._id > 31) {
       return false;
     }
     if (
-      set._id === 14
-      || set._id === 16
-      || set._id === 18
-      || set._id === 24
-      || set._id === 31
-      || set._id === 34
+      set._id === 14 ||
+      set._id === 16 ||
+      set._id === 18 ||
+      set._id === 24 ||
+      set._id === 31 ||
+      set._id === 34
     ) {
       [set.tvShows] = set.films;
     } else if (set._id === 13 || set._id === 23) {
@@ -44,6 +29,7 @@ const displayCard = (data, div, likes) => {
       }
     }
     console.log(likeS);
+
     div.innerHTML += `<div
     class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-4">
     <div class="icon-box">
