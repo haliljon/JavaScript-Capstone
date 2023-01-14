@@ -9,7 +9,7 @@
     "watch": "webpack --watch",
     "start": "webpack serve --open",
     "build": "webpack --mode production",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -48,6 +48,9 @@
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.3",
     "boxicons": "^2.1.4",
+    "jest": "^29.3.1",
+    "jest-environment-jsdom": "^29.3.1",
+    "jsdom": "^21.0.0",
     "lodash": "^4.17.21",
     "remixicon": "^2.5.0"
   }
