@@ -28,7 +28,7 @@ const renderComment = async (information, index, popup) => {
   });
   const commentTitle = document.querySelector('.comment-title');
   const ulComment = document.querySelector('.ul-comment');
-  
+
   const nbOfComments = countComments(ulComment);
   commentTitle.innerHTML = `Comments(${nbOfComments})`;
   // Add event listener for send comment
@@ -65,8 +65,7 @@ const getData = async () => {
   const likeButton = document.querySelectorAll('.like-button');
   likeButton.forEach((like, index) => {
     like.addEventListener('click', () => {
-      const likeCounter = document.querySelector('.likesSpan');
-      likeCounter.innerText = incrementLikes(information[index]._id, baseUrl);
+      incrementLikes(information[index]._id, baseUrl);
       location.reload();
     });
   });
