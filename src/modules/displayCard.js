@@ -39,7 +39,7 @@ const displayCard = (data, div, likes) => {
       <h4 class="title"><a href="">${set.name}</a></h4>
       <p class="description">${set.tvShows}</p>
       <div class="like-section">
-          <span class="likesSpan">${likeS} likes       </span>
+          <span class="likesSpan">${likeS} likes</span>
           <button class="like-button">♥️</button>
         </div>
       <div class="text-center mt-3">
