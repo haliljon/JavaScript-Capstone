@@ -8,6 +8,7 @@ import displayComment from './modules/displayComment.js';
 import InvolvementAPI from './modules/API.js';
 import likeGetData from './modules/getLikeData.js';
 import itemsCounter from './modules/itemsCounter.js';
+import displayCount from './modules/cardCounter.js';
 import countComments from './modules/countComments';
 
 const baseUrl =
@@ -52,8 +53,9 @@ const getData = async () => {
   const divRow = document.querySelector('.row');
   const popup = document.querySelector('.popup__container');
   const likes = await likeGetData();
-  const itemCount = displayCard(information, divRow, likes);
-  itemsCounter(itemCount);
+  displayCard(information, divRow, likes);
+  const itemCount = document.querySelectorAll('.icon-box');
+  displayCount(itemsCounter(itemCount));
   // Select list of comment buttons after getting rendered by displayCard
   const commentBtn = document.querySelectorAll('.comments');
   commentBtn.forEach((comment, index) => {
