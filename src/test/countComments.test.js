@@ -18,4 +18,12 @@ describe('Count comments', () => {
     const result = countComments(ul);
     expect(result).toBe(3);
   });
+
+  test('it should print 3', () => {
+    document.body.innerHTML = ` <ul class="ul-comment">
+   </ul>`;
+    const ul = document.querySelector('.ul-comment');
+    const result = countComments(ul);
+    expect(result).toBe(0);
+  });
 });
