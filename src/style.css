@@ -254,11 +254,6 @@ h6 {
   color: #f6b024;
 }
 
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-}
-
 .icon-boxes .title {
   font-weight: 700;
   margin: 15px 0;
@@ -285,6 +280,14 @@ h6 {
   height: 500px;
   max-height: 1000px;
   overflow: scroll;
+}
+
+@media only screen and (max-width: 768px) {
+  #icon-boxes {
+    height: 366px;
+    max-height: 1000px;
+    overflow-y: scroll;
+  }
 }
 
 .icon-box img {
