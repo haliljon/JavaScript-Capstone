@@ -19,7 +19,7 @@ describe('Count comments', () => {
     expect(result).toBe(3);
   });
 
-  test('it should print 3', () => {
+  test('it should print 0', () => {
     document.body.innerHTML = ` <ul class="ul-comment">
    </ul>`;
     const ul = document.querySelector('.ul-comment');
